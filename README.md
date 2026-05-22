@@ -1,2 +1,4 @@
 # Portafolio-ISW-521
-Portafolio de Kendall Rodriguez para documentos genericos
+
+## Que va a tener?
+Este es para subir archivos trabajados en clase sin evaluacion. Para cada los proyectos y talleres cada uno va a tener sus repos por aparte
