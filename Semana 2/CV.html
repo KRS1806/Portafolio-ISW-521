@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Kendall Rodríguez Sáenz</title>
+  <meta name="description" content="CV de Kendall Rodríguez Sáenz — Desarrollador de Software con experiencia en JavaScript, Node.js, PHP, Laravel y .NET. San Carlos, Costa Rica.">
+  <meta name="author" content="Kendall Rodríguez Sáenz">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="CV — Kendall Rodríguez Sáenz | Desarrollador de Software">
+  <meta property="og:description" content="Desarrollador de Software con experiencia en JavaScript, Node.js, PHP, Laravel y .NET.">
+  <meta property="og:type" content="profile">
+  <title>CV — Kendall Rodríguez Sáenz | Desarrollador de Software</title>
+  <link rel="canonical" href="#">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -62,7 +69,7 @@
       margin-bottom: 6px;
     }
 
-    .header .subtitle {
+    .header p.subtitle {
       font-size: 15px;
       color: #a0b0c4;
       font-weight: 400;
@@ -77,7 +84,7 @@
       flex-wrap: wrap;
     }
 
-    .info-item {
+    .info-bar p {
       font-size: 13.5px;
       color: #c0cad6;
       display: flex;
@@ -85,7 +92,8 @@
       gap: 7px;
     }
 
-    .info-item .dot {
+    .info-bar p::before {
+      content: '';
       width: 5px;
       height: 5px;
       border-radius: 50%;
@@ -106,7 +114,7 @@
       margin-bottom: 0;
     }
 
-    .section-title {
+    .section > h2 {
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2.5px;
@@ -137,26 +145,27 @@
       margin-bottom: 4px;
     }
 
-    .entry-role {
+    .entry h3 {
       font-size: 16px;
       font-weight: 700;
       color: var(--ink);
     }
 
-    .entry-dates {
+    .entry-header time {
       font-size: 13px;
       color: var(--light);
       font-weight: 500;
       white-space: nowrap;
     }
 
-    .entry-company {
+    .entry p.company {
       font-size: 14px;
       color: var(--accent);
       font-weight: 500;
       margin-bottom: 2px;
     }
 
+    /* --- Education --- */
     .edu-item {
       margin-bottom: 14px;
       padding-left: 16px;
@@ -167,31 +176,33 @@
       margin-bottom: 0;
     }
 
-    .edu-title {
+    .edu-item h3 {
       font-size: 15px;
       font-weight: 700;
       color: var(--ink);
     }
 
-    .edu-school {
+    .edu-item p.school {
       font-size: 14px;
       color: var(--accent);
       font-weight: 500;
     }
 
-    .edu-status {
+    .edu-item p.status {
       font-size: 13px;
       color: var(--light);
       font-style: italic;
     }
 
-    .skills-grid {
+    /* --- Skills --- */
+    .skills-list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      list-style: none;
     }
 
-    .skill-tag {
+    .skills-list li {
       background: var(--accent-soft);
       color: var(--accent);
       font-size: 13.5px;
@@ -216,68 +227,65 @@
 </head>
 <body>
 
-  <div class="page">
+  <main class="page" role="main">
 
-    <div class="header">
+    <header class="header">
       <h1>Kendall Rodríguez Sáenz</h1>
-      <div class="subtitle">Desarrollador de Software</div>
+      <p class="subtitle">Desarrollador de Software</p>
       <div class="info-bar">
-        <div class="info-item">
-          <span class="dot"></span>
-          Fecha de nacimiento: 18 / 06 / 2006
-        </div>
+        <p><time datetime="2006-06-18">Fecha de nacimiento: 18 / 06 / 2006</time></p>
       </div>
-    </div>
+    </header>
 
     <div class="body">
 
-      <div class="section">
-        <div class="section-title">Experiencia Laboral</div>
+      <section class="section" aria-labelledby="experiencia">
+        <h2 id="experiencia">Experiencia Laboral</h2>
 
-        <div class="entry">
+        <article class="entry">
           <div class="entry-header">
-            <span class="entry-role">Desarrollador de Software</span>
-            <span class="entry-dates">Ene 2026 — Presente</span>
+            <h3>Desarrollador de Software</h3>
+            <time datetime="2026-01">Ene 2026 — Presente</time>
           </div>
-          <div class="entry-company">NCQ</div>
-        </div>
+          <p class="company">NCQ</p>
+        </article>
 
-        <div class="entry">
+        <article class="entry">
           <div class="entry-header">
-            <span class="entry-role">Desarrollador de Software</span>
-            <span class="entry-dates">Ene 2025 — Dic 2025</span>
+            <h3>Desarrollador de Software</h3>
+            <time datetime="2025-01/2025-12">Ene 2025 — Dic 2025</time>
           </div>
-          <div class="entry-company">Design Soft — Design and Software Development S.A.</div>
-        </div>
-      </div>
+          <p class="company">Design Soft — Design and Software Development S.A.</p>
+        </article>
+      </section>
 
-      <div class="section">
-        <div class="section-title">Formación Académica</div>
+      <section class="section" aria-labelledby="formacion">
+        <h2 id="formacion">Formación Académica</h2>
 
-        <div class="edu-item">
-          <div class="edu-title">Bachillerato en Ingeniería en Sistemas</div>
-          <div class="edu-school">Universidad Técnica Nacional (UTN)</div>
-          <div class="edu-status">En proceso</div>
-        </div>
+        <article class="edu-item">
+          <h3>Bachillerato en Ingeniería en Sistemas</h3>
+          <p class="school">Universidad Técnica Nacional (UTN)</p>
+          <p class="status">En proceso</p>
+        </article>
 
-        <div class="edu-item">
-          <div class="edu-title">Técnico en Informática</div>
-          <div class="edu-school">COTAI</div>
-        </div>
-      </div>
+        <article class="edu-item">
+          <h3>Técnico en Informática</h3>
+          <p class="school">COTAI</p>
+        </article>
+      </section>
 
-      <div class="section">
-        <div class="section-title">Conocimientos Técnicos</div>
-        <div class="skills-grid">
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Laravel</span>
-          <span class="skill-tag">.NET Core</span>
-          <span class="skill-tag">.NET Framework</span>
-        </div>
-      </div>
+      <section class="section" aria-labelledby="conocimientos">
+        <h2 id="conocimientos">Conocimientos Técnicos</h2>
+        <ul class="skills-list" aria-label="Lista de habilidades técnicas">
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>.NET Core</li>
+          <li>.NET Framework</li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </main>
 </body>
 </html>
