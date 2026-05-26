@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop semana 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .site-header {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: row;
+            padding: 12px 20px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            gap: 20px;
+        }
+
+        .site-header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .search-form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .search-fieldset {
+            border: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .search-fieldset label {
+            font-size: 14px;
+        }
+
+        .search-fieldset input {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            padding: 6px 14px;
+            background-color: #2a5da8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .search-btn:hover {
+            background-color: #1e4a8a;
+        }
+
+        .page-layout {
+            display: flex;
+            gap: 0;
+        }
+
+        .sidebar-filters {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 200px;
+            padding: 16px;
+            background-color: #fafafa;
+            border-right: 1px solid #eee;
+        }
+
+        .sidebar-filters h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-filters ul {
+            list-style: none;
+        }
+
+        .sidebar-filters li {
+            margin-bottom: 6px;
+        }
+
+        .sidebar-filters a {
+            text-decoration: none;
+            color: #2a5da8;
+            font-size: 14px;
+        }
+
+        .sidebar-filters a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .main-article h1 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .main-article p {
+            font-size: 15px;
+        }
+
+        .sidebar-related {
+            width: 200px;
+            padding: 16px;
+            background-color: #fafafa;
+            border-left: 1px solid #eee;
+        }
+
+        .sidebar-related h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-related ul {
+            list-style: none;
+        }
+
+        .sidebar-related li {
+            margin-bottom: 6px;
+        }
+
+        .sidebar-related a {
+            text-decoration: none;
+            color: #2a5da8;
+            font-size: 14px;
+        }
+
+        .sidebar-related a:hover {
+            text-decoration: underline;
+        }
+
+        .site-footer {
+            padding: 12px 20px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo_Universidad_T%C3%A9cinca_Nacional_%28Costa_Rica%29.svg/1280px-Logo_Universidad_T%C3%A9cinca_Nacional_%28Costa_Rica%29.svg.png" alt="UTN Logo">
+        <form method="get" class="search-form">
+            <fieldset class="search-fieldset">
+                <label for="search">Buscar</label>
+                <input type="search" name="search" id="search">
+            </fieldset>
+            <button type="submit" class="search-btn">Buscar</button>
+        </form>
+    </header>
+    <div class="page-layout">
+        <aside class="sidebar-filters" aria-label="Filtros">
+            <h2>Filtros</h2>
+            <ul>
+                <li><a href="#">Categoría 1</a></li>
+                <li><a href="#">Categoría 2</a></li>
+                <li><a href="#">Categoría 3</a></li>
+                <li><a href="#">Categoría 4</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <article class="main-article">
+                <h1>Título del artículo principal</h1>
+                <p>Este es el contenido principal del artículo. Aquí va el texto relevante de la página, estructurado semánticamente con etiquetas HTML5.</p>
+            </article>
+        </main>
+        <aside class="sidebar-related" aria-label="Contenido relacionado">
+            <h2>Relacionados</h2>
+            <ul>
+                <li><a href="#">Enlace relacionado 1</a></li>
+                <li><a href="#">Enlace relacionado 2</a></li>
+                <li><a href="#">Enlace relacionado 3</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer class="site-footer">© UTN 2026</footer>
+</body>
+</html>
