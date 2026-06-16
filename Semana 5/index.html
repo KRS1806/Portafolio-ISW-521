@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <div class="header-inner">
+      <a href="/" class="site-title">Mi Portafolio</a>
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        onclick="toggleMenu(this)"
+      >☰</button>
+      <nav id="main-nav" role="navigation" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero" aria-label="Perfil del estudiante">
+    <div class="hero-inner">
+      <div class="profile-img" role="img" aria-label="Avatar de perfil">🧑‍💻</div>
+      <div class="hero-content">
+        <h1>Kendall Rodríguez</h1>
+        <p class="tagline">Desarrollador de Software · NCQ Technologies</p>
+        <p>Estudiante de Ingeniería en Sistemas apasionado por el desarrollo backend en .NET, bases de datos PostgreSQL y aplicaciones de escritorio con WinForms.</p>
+      </div>
+    </div>
+  </section>
+  <main id="main-content">
+    <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <h2 class="section-title" id="titulo-sobre-mi">Sobre mí</h2>
+      <div class="about-content">
+        <p>Soy un desarrollador enfocado en soluciones empresariales con C# y .NET, trabajando en arquitecturas limpias y sistemas robustos para el ecosistema NCQ.</p>
+        <p>Me interesa la arquitectura de software, los patrones de diseño y el desarrollo de APIs REST. Fuera del trabajo, exploro el desarrollo web frontend y aplico lo aprendido en proyectos académicos del curso ISW-521.</p>
+      </div>
+    </section>
+    <section id="proyectos" aria-labelledby="titulo-proyectos">
+        <h2 class="section-title" id="titulo-proyectos">Proyectos</h2>
+        <ul class="projects-grid" role="list">
+          <li class="project-card">
+            <h3>QUPOS – Módulo de Autorización de Órdenes de Compra</h3>
+            <span class="project-tag">C# · WinForms · DevExpress · PostgreSQL · Npgsql</span>
+            <p>Flujo completo de autorización de órdenes de compra dentro del ERP QUPOS. Incluye validación de pedidos especiales (<code>ValidarPedidoEspecial</code>), lectura de filas enfocadas en grillas DevExpress (<code>GetFocusedRowCellValue</code>) y manejo parametrizado de consultas con <code>NpgsqlParameter[]</code> para evitar inyección SQL.</p>
+            <a href="#proyectos" class="project-link" aria-label="Ver proyecto Autorización de Órdenes de Compra">Ver proyecto →</a>
+          </li>
+      
+          <li class="project-card">
+            <h3>NotificationCenter – Alertas de Stock Mínimo</h3>
+            <span class="project-tag">C# · Windows Service · Amazon SES · PostgreSQL · Npgsql</span>
+            <p>Servicio de Windows que consulta la tabla <code>inventario</code> con criterios duales: <code>existencia_minima</code> y <code>minimo_dias_inventario × promedio_venta</code>. Persiste historial en <code>notificaciones_historial</code>, controla ventanas de tiempo con <code>YaEjecutoNotificacionHoy</code> y envía alertas por correo vía Amazon SES.</p>
+            <a href="#proyectos" class="project-link" aria-label="Ver proyecto NotificationCenter">Ver proyecto →</a>
+          </li>
+      
+          <li class="project-card">
+            <h3>FE_API – Facturación Electrónica Hacienda CR</h3>
+            <span class="project-tag">.NET · Clean Architecture · FluentValidation · XML Signing · Swagger</span>
+            <p>API REST en .NET con Clean Architecture para integración con el sistema de facturación electrónica del Ministerio de Hacienda de Costa Rica. Implementa validadores seccionados con FluentValidation (<code>ValidateIssuer</code>, <code>ValidateReceiver</code>, <code>ValidateInvoiceDetails</code>), firma digital XML migrada de Python a C# mediante <code>XmlSigningService</code> y <code>CertificateService</code>.</p>
+            <a href="#proyectos" class="project-link" aria-label="Ver proyecto FE_API">Ver proyecto →</a>
+          </li>
+      
+          <li class="project-card">
+            <h3>QUPOS – Gestión de Familias de Artículos</h3>
+            <span class="project-tag">C# · WinForms · Patrón Factory · DevExpress · PostgreSQL</span>
+            <p>Refactorización del módulo de artículos en QUPOS aplicando el patrón <code>FamiliaFactory</code> e interfaces segregadas (<code>IFamilia</code> / <code>IFamiliaGestora</code>). Separación de responsabilidades entre lectura y escritura, con controles DevExpress (<code>SpinEdit</code>, <code>XtraTabControl</code>) y lógica de porcentajes por familia de productos.</p>
+            <a href="#proyectos" class="project-link" aria-label="Ver proyecto Gestión de Familias">Ver proyecto →</a>
+          </li>
+      
+          <li class="project-card">
+            <h3>QUPOS – Módulo de Inventario y Reportes</h3>
+            <span class="project-tag">C# · CrystalDecisions · PostgreSQL · DLL Integration</span>
+            <p>Integración de <code>InventarioB.dll</code> en el módulo de inventario de QUPOS para generación de reportes con CrystalDecisions. Consultas SQL con <code>CASE WHEN</code> para manejo de valores nulos en existencias, reporte de artículos bajo stock crítico y exportación de resultados desde grillas DevExpress.</p>
+            <a href="#proyectos" class="project-link" aria-label="Ver proyecto Inventario y Reportes">Ver proyecto →</a>
+          </li>
+      
+          <li class="project-card">
+            <h3>Portafolio Web – ISW-521</h3>
+            <span class="project-tag">HTML5 · CSS3 · JavaScript · Responsive Design · WCAG</span>
+            <p>Portafolio académico desarrollado con HTML, CSS y JS puros para el curso ISW-521. Aplica CSS Grid con media queries para 3 breakpoints, navegación accesible con atributos ARIA (<code>aria-expanded</code>, <code>aria-controls</code>, skip link), menú hamburguesa con animación <code>max-height</code> y cumplimiento de pautas WCAG 2.1.</p>
+            <a href="#proyectos" class="project-link" aria-label="Ver proyecto Portafolio ISW-521">Ver proyecto →</a>
+          </li>
+        </ul>
+    </section>
+    <section id="habilidades" aria-labelledby="titulo-habilidades">
+      <h2 class="section-title" id="titulo-habilidades">Habilidades</h2>
+      <ul class="skills-list" aria-label="Lista de habilidades técnicas">
+        <li>C# / .NET</li>
+        <li>WinForms · DevExpress</li>
+        <li>PostgreSQL</li>
+        <li>Clean Architecture</li>
+        <li>REST APIs</li>
+        <li>HTML · CSS · JS</li>
+        <li>Git / GitHub</li>
+        <li>Windows Services</li>
+        <li>Diseño Responsive</li>
+      </ul>
+    </section>
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 class="section-title" id="titulo-contacto">Contacto</h2>
+      <div class="contact-content">
+        <p>¿Interesado en colaborar o tienes alguna consulta? Puedes encontrarme en:</p>
+        <div class="contact-links" aria-label="Redes de contacto">
+          <a href="mailto:kendallrodri1@gmail.com" aria-label="Enviar correo a Kendall">Email</a>
+          <a href="https://github.com/KRS1806" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/kendall-rodriguez-b53831264/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <p>© 2025 Kendall Rodríguez</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
