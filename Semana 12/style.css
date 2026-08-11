@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: #f4f5f7;
+    margin: 0;
+    padding: 40px 20px;
+    color: #222;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  
+  #app {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .user-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  
+  .user-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .user-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #6c5ce7;
+  }
+  
+  .user-info strong {
+    display: block;
+    font-size: 16px;
+  }
+  
+  .user-info span {
+    color: #666;
+    font-size: 13px;
+  }
+  
+  .state-message {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 15px;
+    color: #555;
+  }
+  
+  .state-message.error {
+    color: #d63031;
+  }
+  
+  .reload-btn {
+    display: block;
+    margin: 24px auto 0;
+    padding: 10px 22px;
+    background: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .reload-btn:hover {
+    background: #5a4bd6;
+  }
